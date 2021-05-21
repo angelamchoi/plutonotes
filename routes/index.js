@@ -1,13 +1,10 @@
 const router = require('express').Router();
 const passport = require('passport');
 
-// The root route renders our only view
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function(req, res) {
+  res.render('index', { title: 'plutonotes' });
 });
 
-// Google OAuth login route
-// eslint-disable-next-line prettier/prettier
 router.get('/auth/google', passport.authenticate(
   'google',
   { scope: ['profile', 'email'] }
