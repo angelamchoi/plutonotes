@@ -2,8 +2,10 @@ nav {
   background-color: white;
 }
 nav ul a {
-  color:blue;
+  color:darkturquoise;
   padding: 0 15px;
+  font-weight: bolder;
+  font-size: x-large;
 
 }
 
@@ -15,6 +17,7 @@ nav .brand-logo {
    font-size: large;
  
  }
+
  
 h1 {
   color: rebeccapurple;
@@ -64,6 +67,9 @@ p {
     color: white;
   }
  
+  .more-info {
+    display: flex;
+  }
  .sidenav-trigger {
    color: #26a69a;
  }

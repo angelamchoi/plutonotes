@@ -6,10 +6,20 @@ const usersCtrl = require('../controllers/users');
 //   if (req.isAuthenticated()) return next();
 //   res.redirect('/auth/google');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('you are in');
+// login 
+router.get('/', function(req, res) {
+  res.render('login')
+  // res.send('you are in');
 });
+
+// create notes
+
+// my notes
+
+// public notes
+
+
+
 
 
 module.exports = router;

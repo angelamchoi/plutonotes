@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <!-- <a href=""class="brand-logo left">plutonotes</a> -->
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="users/mynotes">My notes</a></li>
+                    <li><a href="users/create">Create notes</a></li>
+                    <li><a href="users/public">Public notes</a></li>
+                  </ul>
+              
+                <ul class="right">
+                    <li>
+                        <% if (user) { %>
+                            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                            <% } else { %>
+                                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                                <% } %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+<div class ="create-notes">
+    <h2> create notes</h2>
+    <form actions ="/user" method ="POST">
+    <label> Title</label>
+    <input type ="text" name ="title">
+    <label>Date</label>
+    <input type = "datetime-local" name = "date">
+    
+    <textarea id= "notes" name = "notes" placeholder = "Show me your markdown magic"></textarea>
+    <input type="submit" value="Edit">
+    <input type="submit" value="Save">
+    <input type="submit" value="Share Publicly">
+</div>
+</form>
+</body>
+</html>
+<%- include('partials/footer') %>
