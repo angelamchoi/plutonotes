@@ -9,3 +9,31 @@
     <!-- JavaScript for Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <!-- <a href=""class="brand-logo left">plutonotes</a> -->
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="../home">Home</a></li>
+                    <li><a href="../users">Profile</a></li>
+                    <li><a href="../users/mynotes">My notes</a></li>
+                    <li><a href="../users/create">Create notes</a></li>
+                    <li><a href="/publicnotes">Public notes</a></li>
+                  </ul>
+              
+                <ul class="right">
+                    <li>
+                        <% if (user) { %>
+                            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                            <% } else { %>
+                                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                                <% } %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>

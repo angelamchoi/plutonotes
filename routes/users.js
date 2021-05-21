@@ -6,17 +6,27 @@ const usersCtrl = require('../controllers/users');
 //   if (req.isAuthenticated()) return next();
 //   res.redirect('/auth/google');
 
-// login 
+// login goes to create notes
+// this is the users' base page!!
 router.get('/', function(req, res) {
-  res.render('login')
-  // res.send('you are in');
+  res.render('profile')
 });
 
-// create notes
+router.get('/users', function(req,res){
+  res.render('profile');
+})
 
 // my notes
+router.get('/mynotes', function(req,res) {
+  res.render('mynotes')
+});
 
-// public notes
+// create page
+router.get('/create', function(req,res) {
+  res.render('create')
+});
+
+
 
 
 

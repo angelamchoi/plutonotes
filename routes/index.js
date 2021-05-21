@@ -25,5 +25,15 @@ router.get('/logout', function (req, res) {
   res.redirect('/');
 });
 
+//public notes
+router.get('/publicnotes', function(req,res) {
+  res.render('publicnotes');
+})
+
+//home page
+router.get('/home', function(req,res) {
+  res.render('index');
+})
+
 module.exports = router;
 

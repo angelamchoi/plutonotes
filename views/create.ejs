@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<body>
+<div class ="create-notes">
+    <h2> hello create notes</h2>
+    <form actions ="/user" method ="POST">
+    <label> Title</label>
+    <input type ="text" name ="title">
+    <label>Date</label>
+    <input type = "datetime-local" name = "date">
+    
+    <textarea id= "notes" name = "notes" placeholder = "Show me your markdown magic"></textarea>
+    <input type="submit" value="Edit">
+    <input type="submit" value="Save">
+    <input type="submit" value="Share Publicly">
+</div>
+</form>
+</body>
+</html>
+<%- include('partials/footer') %>
