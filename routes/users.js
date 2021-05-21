@@ -8,7 +8,8 @@ const usersCtrl = require('../controllers/users');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('YOU ARE IN!!!!');
+  res.send('you are in');
 });
+
 
 module.exports = router;

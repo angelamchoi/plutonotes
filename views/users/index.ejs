@@ -1,21 +1,27 @@
 <%- include('partials/header') %>
 <body>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="" class="brand-logo left">plutonotes</a>
-                <!-- Add login UI here -->
-                <ul class="right">
-                    <li>
-                        <% if (user) { %>
-                            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
-                            <% } else { %>
-                                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-                                <% } %>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+  <div class="navbar-fixed">
+      <nav>
+          <div class="nav-wrapper">
+              <a href="" class="brand-logo left">plutonotes</a>
+              <!-- Add login UI here -->
+              <ul class="right">
+                  <li>
+                      <% if (user) { %>
+                          <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                          <% } else { %>
+                              <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                              <% } %>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </div>
+  <h1>plutonotes</h1>
+  <p> Take your notes to the next level. Markdown style edition. </p>
+  <textarea id= "subject" name = "subject" placeholder = "Markdown is cool...""></textarea>
+  <input type="submit" value="Get Started">
 </body>
 </html>
+<%- include('partials/footer') %>
+

@@ -1,8 +1,106 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+nav {
+  background-color: white;
+}
+nav ul a {
+  color:blue;
+  padding: 0 15px;
+
 }
 
-a {
-  color: #00B7FF;
+nav .brand-logo {
+   color: rebeccapurple;
+   background-color: white;
+   padding: 0 15px;
+   font-weight: bold;
+   font-size: large;
+ 
+ }
+ 
+h1 {
+  color: rebeccapurple;
+  font-weight: bold;
+  text-align: center;
+  font-size: 80px;
+}
+p {
+   line-height: 2rem;
+   text-align: center;
+   font-size: 30px;
+   color: slategrey;
+ }
+
+ body {
+   background-color: aliceblue;
+ }
+ 
+ textarea {
+    width: 30%;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    margin-left: 35%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  input[type=submit] {
+    background: rgb(130,49,230);
+    background: linear-gradient(90deg, rgba(130,49,230,1) 26%, rgba(34,202,233,1) 100%);
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 48%;
+    
+  }
+  
+  input[type=submit]:hover {
+    transition: ease-in 0.3s;
+    background: #26a69a;
+    color: white;
+  }
+ 
+ .sidenav-trigger {
+   color: #26a69a;
+ }
+ 
+ .parallax-container {
+   min-height: 380px;
+   line-height: 0;
+   height: auto;
+   color: rgba(255,255,255,.9);
+ }
+   .parallax-container .section {
+     width: 100%;
+   }
+ 
+ @media only screen and (max-width : 992px) {
+   .parallax-container .section {
+     position: absolute;
+     top: 40%;
+   }
+   #index-banner .section {
+     top: 10%;
+   }
+ }
+ 
+ @media only screen and (max-width : 600px) {
+   #index-banner .section {
+     top: 0;
+   }
+ }
+ 
+ .icon-block {
+   padding: 0 15px;
+ }
+ .icon-block .material-icons {
+   font-size: inherit;
+ }
+
+footer.page-footer {
+  margin: 0;
 }
