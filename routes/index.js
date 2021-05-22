@@ -30,6 +30,10 @@ router.get('/publicnotes', function(req,res) {
   res.render('publicnotes');
 })
 
+router.get('/publicnotes/view', function(req,res) {
+  res.render('publicviews');
+})
+
 //home page
 router.get('/home', function(req,res) {
   res.render('index');

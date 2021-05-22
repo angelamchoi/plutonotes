@@ -10,6 +10,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <!-- <a href=""class="brand-logo left">plutonotes</a> -->
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="../home">Home</a></li>
+                  </ul>
+                  <ul class="right">
+                    <li>
+                        <% if (user) { %>
+                            <a href="/logout"><i class="material-icons left">trending_flat</i>Log Out</a>
+                            <% } else { %>
+                                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                                <% } %>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
 <h2>public notes </h2>
 
 <!--example1-->
@@ -24,7 +45,7 @@
           <p>Grogu is a character from the Star Wars Disney+ original television series The Mandalorian. He is a toddler member of the same unnamed alien species as the Star Wars characters Yoda and Yaddle, with whom he shares a strong ability in the Force.</p>
         </div>
         <div class="card-action">
-          <a href="#">VIEW</a>
+          <a href="/publicnotes/view">VIEW</a>
         </div>
       </div>
     </div>
