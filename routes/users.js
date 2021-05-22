@@ -6,7 +6,7 @@ const usersCtrl = require('../controllers/users');
 //   if (req.isAuthenticated()) return next();
 //   res.redirect('/auth/google');
 
-// login goes to create notes
+// login goes to profile
 // this is the users' base page!!
 router.get('/', function(req, res) {
   res.render('profile')
@@ -28,6 +28,11 @@ router.get('/mynotes/view', function(req,res) {
 // create page
 router.get('/create', function(req,res) {
   res.render('create')
+});
+
+router.post('/mynotes', function(req,res) {
+  console.log(req.body.title);
+  console.log(req.body.content);
 });
 
 

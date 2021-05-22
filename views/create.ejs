@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 <body>
 <div class ="create-notes">
-    <h2> hello create notes</h2>
+    <h2> hello, let's create a note!</h2>
       <!-- Switch -->
    <div class="switch">
     <label>
@@ -12,12 +12,12 @@
     </label>
   </div>
 
-    <form actions ="/user" method ="POST">
+ <!-- Form -->
+    <form actions ="/mynotes" method ="POST">
     <label> Title</label>
     <input type ="text" name ="title">
     <label>Date</label>
     <input type = "datetime-local" name = "date">
-    <form action="#">
       <p>
         <label>
           <input type="checkbox" />
@@ -25,13 +25,12 @@
         </label>
       </p>
     </form>
-          
-    
-    <textarea id= "notes" name = "notes" placeholder = "Show me your markdown magic"></textarea>
+    <textarea id= "notes" name = "content" placeholder = "Show me your markdown magic"></textarea>
     <input type="submit" value="Submit">
 </div>
 </form>
 
+ <!-- Markdown Cheatsheet -->
 <div class="row">
     <div class="col s12 m5">
       <div class="card-panel teal">
