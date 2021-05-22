@@ -21,6 +21,10 @@ router.get('/mynotes', function(req,res) {
   res.render('mynotes')
 });
 
+router.get('/mynotes/view', function(req,res) {
+  res.render('mynotesview')
+});
+
 // create page
 router.get('/create', function(req,res) {
   res.render('create')
