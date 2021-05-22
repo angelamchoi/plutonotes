@@ -2,6 +2,16 @@
 <body>
 <div class ="create-notes">
     <h2> hello create notes</h2>
+      <!-- Switch -->
+   <div class="switch">
+    <label>
+      light mode
+      <input type="checkbox">
+      <span class="lever"></span>
+      dark mode
+    </label>
+  </div>
+
     <form actions ="/user" method ="POST">
     <label> Title</label>
     <input type ="text" name ="title">
@@ -14,6 +24,21 @@
     <input type="submit" value="Share Publicly">
 </div>
 </form>
+
+<div class="row">
+    <div class="col s12 m5">
+      <div class="card-panel teal">
+        <span class="white-text">
+            <p>Markdown Cheatshet</p>
+            <p># Big Header</p>
+            <p><em>*italicize*</em></p>
+            <p> **bold** </p>
+        </span>
+      </div>
+    </div>
+  </div>
+
+    
 </body>
 </html>
 <%- include('partials/footer') %>

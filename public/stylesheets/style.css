@@ -5,7 +5,7 @@ nav ul a {
   color:darkturquoise;
   padding: 0 15px;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: large;
 
 }
 
@@ -15,7 +15,6 @@ nav .brand-logo {
    padding: 0 15px;
    font-weight: bold;
    font-size: large;
- 
  }
 
  
@@ -39,6 +38,19 @@ p {
  textarea {
     width: 30%;
     height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    margin-left: 35%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+textarea notes {
+   width: 30%;
+    height: 500px;
     padding: 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -83,6 +95,8 @@ p {
    .parallax-container .section {
      width: 100%;
    }
+ 
+
  
  @media only screen and (max-width : 992px) {
    .parallax-container .section {
