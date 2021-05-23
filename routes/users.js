@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const usersCtrl = require('../controllers/users');
+const notesCtrl = require('../controllers/notes');
+const Note = require('../controllers/users');
 
 // function isLoggedIn(req, res, next) {
 //   if (req.isAuthenticated()) return next();
@@ -31,8 +33,7 @@ router.get('/create', function(req,res) {
 });
 
 router.post('/mynotes', function(req,res) {
-  console.log(req.body.title);
-  console.log(req.body.content);
+  res.render('create')
 });
 
 

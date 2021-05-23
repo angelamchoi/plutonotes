@@ -1,17 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
-// comments
-const commentSchema = new Schema(
-{
-  content: String,
-  rating: {type: Number, min: 1, max: 5, default: 5}
-}, {
-  timestamps: true
-});
-
-//userschema
+//user
 const userSchema = new Schema(
     {
       name: { 
@@ -25,6 +15,16 @@ const userSchema = new Schema(
       timestamps: true,
     }
   );
+
+// comments
+const commentSchema = new Schema(
+  {
+    name: [userSchema],
+    content: String,
+    rating: {type: Number, min: 1, max: 5, default: 5}
+  }, {
+    timestamps: true
+  });
 
 
   module.exports = mongoose.model('User', userSchema);

@@ -1,4 +1,5 @@
-const User = require('../models/user')
+const User = require('../models/user');
+const Note = require('../models/note');
 
 module.exports = {
 create:create
@@ -15,3 +16,9 @@ function create(req, res) {
       res.redirect(`/mynotes/${notes._id}`);
     });
   }
+//   const note = new Note ({
+//     title: req.body.title,
+//     description: req.body.description,
+//     content: req.body.content,
+//   })
+//   note.save()

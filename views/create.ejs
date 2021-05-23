@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 <body>
 <div class ="create-notes">
-    <h2> hello, let's create a note!</h2>
+    <h2> hello, let's create a new note!</h2>
       <!-- Switch -->
    <div class="switch">
     <label>
@@ -15,7 +15,9 @@
  <!-- Form -->
     <form actions ="/mynotes" method ="POST">
     <label> Title</label>
-    <input type ="text" name ="title">
+    <input required type ="text" name ="title">
+    <label>Description</label>
+    <input required type ="text" name ="description">
     <label>Date</label>
     <input type = "datetime-local" name = "date">
       <p>
