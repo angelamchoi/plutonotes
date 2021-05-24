@@ -79,7 +79,8 @@ textarea notes {
     color: white;
   }
 
-  .material-icons {
+/*landing page icon*/
+.material-icons {
     color: #00bcd4;
     font-size: 5rem;
     display: block;
