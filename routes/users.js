@@ -32,7 +32,7 @@ router.get('/create', function(req,res) {
 });
 
 router.post('/mynotes', usersCtrl.addNote);
-// router.get('/:id',usersCtrl.show);
+//
 
 
 

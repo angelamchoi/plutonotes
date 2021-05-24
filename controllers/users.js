@@ -24,7 +24,7 @@ const addNote=(req, res) => {
     const newItem=new Note(req.body);
     newItem.save(function(err){
         if (err) return res.redirect('/create');
-        res.redirect('/mynotes');
+        res.redirect('mynotes');
     })
   }
 
@@ -36,8 +36,12 @@ const addNote=(req, res) => {
     });
   }
 
+  // show
+
+
 
 module.exports = {
     index,
-    addNote
+    addNote,
+
 };
