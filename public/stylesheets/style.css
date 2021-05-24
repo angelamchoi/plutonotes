@@ -78,10 +78,12 @@ textarea notes {
     background: #26a69a;
     color: white;
   }
- 
-  .more-info {
-    display: flex;
-  }
+
+
+.light {
+  font-weight: 300;
+}
+
  .sidenav-trigger {
    color: #26a69a;
  }

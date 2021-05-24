@@ -32,7 +32,8 @@ router.get('/create', function(req,res) {
   res.render('create')
 });
 
-router.post('/mynotes', notesCtrl.create);
+router.post('/mynotes', usersCtrl.create);
+// router.get('/:id',usersCtrl.show);
 
 
 
