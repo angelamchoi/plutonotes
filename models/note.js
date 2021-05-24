@@ -19,7 +19,6 @@ const noteSchema = new Schema ({
       type: String,
       required: true
     },
-    creator: [userSchema],
     published: { type: Boolean, default: false},
   });
   

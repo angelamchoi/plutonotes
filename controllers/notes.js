@@ -1,11 +1,6 @@
 const User = require('../models/user');
 const Note = require('../models/note');
 
-module.exports = {
-create:create
-
-}
-
 function create(req, res) {
     const notes = new Notes(req.body);
     // Assign the logged in user's id
@@ -22,3 +17,8 @@ function create(req, res) {
 //     content: req.body.content,
 //   })
 //   note.save()
+
+module.exports = {
+  create
+  
+  };

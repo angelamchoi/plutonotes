@@ -32,13 +32,7 @@ router.get('/create', function(req,res) {
   res.render('create')
 });
 
-router.post('/mynotes', function(req,res) {
-  res.render('create')
-});
-
-
-
-
+router.post('/mynotes', notesCtrl.create);
 
 
 
