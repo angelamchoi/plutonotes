@@ -17,23 +17,20 @@ function index(req, res, next) {
         });
 }
 
-//create
-function create(req, res) {
-    const notes = new Notes(req.body);
-    // Assign the logged in user's id
-    notes.user = req.user._id;
-    notes.save(function(err) {
-      if (err) return render('/profile');
-      //
-      res.redirect('/mynotes');
-    //   res.redirect(`/mynotes/${notes._id}`);
-    });
+const addNote=(req, res) => {
+    for (let key in req.body) {
+        if (req.body[key] === '') delete req.body[key];
+    }
+    const newItem=new Note(req.body);
+    newItem.save(function(err){
+        if (err) return res.redirect('/create');
+        res.redirect('/mynotes');
+    })
   }
 
   //edit
   function edit(req, res) {
    Note.findById(req.params.id, function(err, note) {
-      // Verify book is "owned" by logged in user
       if (!note.user.equals(req.user._id)) return res.redirect('/mynotes');
       res.render('mynotes/edit', {notes});
     });
@@ -42,5 +39,5 @@ function create(req, res) {
 
 module.exports = {
     index,
-    create
+    addNote
 };
