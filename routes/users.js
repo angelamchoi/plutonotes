@@ -30,7 +30,7 @@ router.get('/create', function(req,res) {
   res.render('create')
 });
 
-router.post('/mynotes', usersCtrl.addNote);
+router.post('/mynotes', usersCtrl.create);
 
 
 

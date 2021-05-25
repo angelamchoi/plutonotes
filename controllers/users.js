@@ -23,7 +23,7 @@ const newNote=(req, res) => {
   }
 
 // add note
-const addNote= (req, res) => {
+const create= (req, res) => {
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
@@ -48,5 +48,5 @@ const addNote= (req, res) => {
 
 module.exports = {
     index,
-    addNote
+    create
 };
