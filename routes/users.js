@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const usersCtrl = require('../controllers/users');
-const Note = require('../controllers/users');
 
 // function isLoggedIn(req, res, next) {
 //   if (req.isAuthenticated()) return next();
@@ -26,13 +25,13 @@ router.get('/mynotes/view', function(req,res) {
   res.render('mynotesview')
 });
 
-// create page
+// create note
 router.get('/create', function(req,res) {
   res.render('create')
 });
 
 router.post('/mynotes', usersCtrl.addNote);
-//
+
 
 
 

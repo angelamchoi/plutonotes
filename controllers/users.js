@@ -17,31 +17,36 @@ function index(req, res, next) {
         });
 }
 
-const addNote=(req, res) => {
+// new flight 
+const newNote=(req, res) => {
+    res.render ('users/create', {title: 'Add A New Note'});
+  }
+
+// add note
+const addNote= (req, res) => {
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     }
-    const newItem=new Note(req.body);
+    const newItem= new Note(req.body);
     newItem.save(function(err){
-        if (err) return res.redirect('/create');
-        res.redirect('mynotes');
+        if (err) return res.redirect('users/create');
+        res.redirect('users/mynotes');
     })
   }
 
-  //edit
-  function edit(req, res) {
-   Note.findById(req.params.id, function(err, note) {
-      if (!note.user.equals(req.user._id)) return res.redirect('/mynotes');
-      res.render('mynotes/edit', {notes});
-    });
-  }
+
+//   //edit
+//   function edit(req, res) {
+//    Note.findById(req.params.id, function(err, note) {
+//       if (!note.user.equals(req.user._id)) return res.redirect('/mynotes');
+//       res.render('mynotes/edit', {notes});
+//     });
+//   }
 
   // show
 
 
-
 module.exports = {
     index,
-    addNote,
-
+    addNote
 };
