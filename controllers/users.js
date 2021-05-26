@@ -57,12 +57,25 @@ function edit (req, res) {
     });
 };
 
-  // show
+// function edit(req, res) {
+//     Book.findById(req.params.id, function(err, book) {
+//       // Verify book is "owned" by logged in user
+//       if (!book.user.equals(req.user._id)) return res.redirect('/books');
+//       res.render('books/edit', {book});
+//     });
+//   }
 
+  // delete
+function destroy(req, res) {
+    const deleteNote = req.params.id;
+    Note.destroy(deleteNote);
+    res.redirect('/mynotes');
+}
 
 module.exports = {
     index,
     allNotes,
     create,
-    edit
+    edit,
+    destroy
 };
