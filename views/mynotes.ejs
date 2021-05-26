@@ -25,14 +25,15 @@
         <span class="card-title"></span>
       <ul>
         <% notes.forEach(function(t){ %>
-        <%= t.title%>
-        <%= t.description%>
-        <%= t.content%>
-        <% }) %>
+          <%= t.title%>
+          <%= t.description%>
+          <%= t.date.toLocaleDateString()%>
+          <%= t.content%>
+          <% }); %>
         </ul>
     <div class="card-action">
       <a href="../users/mynotes/view">View</a>
-      <a href="../users/mynotes/view">Edit</a>
+      <a href="../users/mynotes/edit">Edit</a>
       <a href="../users/mynotes/delete">Delete</a>
     </div>
       </div>
