@@ -10,6 +10,7 @@ const userSchema = new Schema(
       },
       email: String,
       googleId: String,
+      note: [{type: Schema.Types.ObjectId, ref: 'Note'}]
     },
     {
       timestamps: true,

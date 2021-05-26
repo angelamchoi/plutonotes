@@ -1,6 +1,7 @@
 const User = require('../models/user');
 const Note = require('../models/note');
 
+// login
 function index(req, res, next) {
     console.log(req.query)
     let modelQuery = req.query.name ? { name: new RegExp(req.query.name, 'i') } : {};
@@ -17,21 +18,44 @@ function index(req, res, next) {
         });
 }
 
-// new flight 
-const newNote=(req, res) => {
-    res.render ('users/create', {title: 'Add A New Note'});
+const allNotes =(req,res) =>{
+    Note.find({}, function(err,notes){
+        if (err) return err;
+        if(!Notes.length){
+            names.forEach((n) =>{
+                let note= new Note ({title:n.title, date:n.date, content:n.content});
+                note.save();
+            })
+        }
+        res.render ('users/mynotes', {title: 'List of All Notes'});
+    })
   }
+
 
 // add note
 const create= (req, res) => {
+    console.log('hi!');
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
-    }
-    const newItem= new Note(req.body);
-    newItem.save(function(err){
-        if (err) return res.redirect('users/create');
-        res.redirect('users/mynotes');
+    } 
+    console.log(req.body);
+    Note.create(req.body)
+    // const newItem= new Note(req.body);
+
+    // User.findById(req.user.id)
+    // .then(function (user){
+    //     user.save();
+    //     return user.note
+    // })
+    .then(function(note){
+        console.log(note);
+        res.render('mynotes', {note});
     })
+    .catch (function(err) {
+        console.log(err);
+        res.redirect('/users/mynotes')
+    })
+        
   }
 
 
@@ -48,5 +72,6 @@ const create= (req, res) => {
 
 module.exports = {
     index,
+    allNotes,
     create
 };
