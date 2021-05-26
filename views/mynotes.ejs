@@ -18,19 +18,45 @@
     </div>
   </div>
 <!-- card for each note--> 
+<table class = "responsive-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Content</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% notes.forEach(function(q) { %>
+      <tr>
+        <td><%= q.title %></td>
+        <td><%= q.description %></td>
+        <td><%= q.date.toLocaleDateString()%></td>
+        <td><%= q.content %></td>
+        <td><a href="/mynotes/view<%= q._id %>">VIEW</a></td>
+        <td><a href="/mynotes/edit<%= q._id %>">EDIT</a></td>
+        <td><a href="/mynotes/delete<%= q._id %>">DELETE</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <!--Notes card-->
 <div class = "row">
     <div class="col s12 m6">
     <div class="card blue-grey darken-1">
       <div class="card-content white-text">
         <span class="card-title"></span>
-      <ul>
+      <tr>
         <% notes.forEach(function(t){ %>
-          <%= t.title%>
-          <%= t.description%>
-          <%= t.date.toLocaleDateString()%>
-          <%= t.content%>
+          <td>Title: <%= t.title%> </td>
+          <td>Description:<%= t.description%></td>
+          <td>Date:<%= t.date.toLocaleDateString()%></td>
+          <td>Content: <%= t.content%></td>
           <% }); %>
-        </ul>
+        </tr>
+
     <div class="card-action">
       <a href="../users/mynotes/view">View</a>
       <a href="../users/mynotes/edit">Edit</a>
@@ -40,4 +66,5 @@
     </div>
     </div>
 </div>
+
   
