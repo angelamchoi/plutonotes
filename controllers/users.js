@@ -19,6 +19,7 @@ function index(req, res, next) {
         });
 }
 
+// all notes
 const allNotes =(req,res) =>{
     Note.find({}, function(err,notes){
         if (err) return err;
@@ -32,36 +33,21 @@ const allNotes =(req,res) =>{
     })
   }
 
-// add note
+// create note
 const create= (req, res) => {
-    console.log('hi!');
+    // console.log('hi!');
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     } 
-    console.log(req.body);
+    // console.log(req.body);
     const note = new Note(req.body);
         note.save(function(err) {
         if (err) return res.redirect('/mynotes');
-    // res.redirect('/movies');
     Note.find({}, function (err, notes) {console.log('yay!!!', notes)
     res.render('mynotes',{notes: notes});
     });
   });
-    // Note.create(req.body)
-    // .then(function(note){
-    //     // console.log(db.collections.notes);
-    //     db.collections.notes.save();
-    //     console.log(note);
-        
-       
-    //     res.render('mynotes', {note});
-    // })
-    // .catch (function(err) {
-    //     console.log(err);
-    //     res.redirect('/users/mynotes')
-    // })
-    
-    
+
   }   
 
   //edit 
