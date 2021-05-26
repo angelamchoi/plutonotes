@@ -17,9 +17,9 @@ router.get('/users', function(req,res){
 })
 
 // my notes
-router.get('/users/mynotes', isLoggedIn, function(req,res) {
-  res.render('mynotes')
-});
+// router.get('/users/mynotes', isLoggedIn, function(req,res) {
+//   res.render('mynotes')
+// });
 
 router.get('/users/mynotes/view', function(req,res) {
   res.render('mynotesview')
@@ -30,8 +30,9 @@ router.get('/users/create', function(req,res) {
   res.render('create')
 });
 
-router.get('/users/mynotes', usersCtrl.allNotes);
+router.get('/users/mynotes', isLoggedIn, usersCtrl.allNotes);
 router.post('/users/mynotes', usersCtrl.create);
+
 
 
 module.exports = router;

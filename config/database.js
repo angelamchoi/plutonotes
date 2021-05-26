@@ -9,3 +9,7 @@ db.once('open', function() {
   // we're connected!
   console.log(`Mongoose connected to: ${db.host}:${db.port}`);
 });
+
+module.exports = {
+ db
+};

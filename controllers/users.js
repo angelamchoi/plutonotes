@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const Note = require('../models/note');
+const db = require('../config/database').db
 
 // login
 function index(req, res, next) {
@@ -21,16 +22,15 @@ function index(req, res, next) {
 const allNotes =(req,res) =>{
     Note.find({}, function(err,notes){
         if (err) return err;
-        if(!Notes.length){
+        if(!notes.length){
             names.forEach((n) =>{
                 let note= new Note ({title:n.title, date:n.date, content:n.content});
                 note.save();
             })
         }
-        res.render ('users/mynotes', {title: 'List of All Notes'});
+        res.render ('mynotes', {notes: notes});
     })
   }
-
 
 // add note
 const create= (req, res) => {
@@ -39,33 +39,37 @@ const create= (req, res) => {
         if (req.body[key] === '') delete req.body[key];
     } 
     console.log(req.body);
-    Note.create(req.body)
-    // const newItem= new Note(req.body);
-
-    // User.findById(req.user.id)
-    // .then(function (user){
-    //     user.save();
-    //     return user.note
-    // })
-    .then(function(note){
-        console.log(note);
-        res.render('mynotes', {note});
-    })
-    .catch (function(err) {
-        console.log(err);
-        res.redirect('/users/mynotes')
-    })
+    const note = new Note(req.body);
+        note.save(function(err) {
+        if (err) return res.redirect('/mynotes');
+    // res.redirect('/movies');
+    Note.find({}, function (err, notes) {console.log('yay!!!', notes)
+    res.render('mynotes',{notes: notes});
+    });
+  });
+    // Note.create(req.body)
+    // .then(function(note){
+    //     // console.log(db.collections.notes);
+    //     db.collections.notes.save();
+    //     console.log(note);
         
-  }
+       
+    //     res.render('mynotes', {note});
+    // })
+    // .catch (function(err) {
+    //     console.log(err);
+    //     res.redirect('/users/mynotes')
+    // })
+    
+    
+  }   
 
-
-//   //edit
-//   function edit(req, res) {
-//    Note.findById(req.params.id, function(err, note) {
-//       if (!note.user.equals(req.user._id)) return res.redirect('/mynotes');
-//       res.render('mynotes/edit', {notes});
-//     });
-//   }
+  //edit 
+function edit (req, res) {
+    res.render('mynotes/edit', {
+        note: Note.findById(req.params.id)
+    });
+};
 
   // show
 
@@ -73,5 +77,6 @@ const create= (req, res) => {
 module.exports = {
     index,
     allNotes,
-    create
+    create,
+    edit
 };
