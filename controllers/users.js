@@ -39,11 +39,17 @@ function edit (req, res) {
   // delete
 function destroy(req, res) {
     const deleteNote = req.params.id;
-    console.log(req.params.id);
+    // console.log(req.params.id);
     Note.findOneAndDelete(deleteNote);
     Note.find({}) .then(function(notes){console.log(notes)});
     res.redirect('/users/mynotes');
 }
+
+//show
+// function show(req, res) {
+//     Note.findById(req.params.id)
+//       .populate(note)
+//       .exec(function (err, note) {
 
 module.exports = {
     allNotes,

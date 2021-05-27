@@ -36,5 +36,8 @@ router.post('/users/mynotes', usersCtrl.create);
 //delete
 router.delete('/users/mynotes/:id', isLoggedIn, usersCtrl.destroy);
 
+//edit
+router.delete('/users/mynotes/:id/edit', isLoggedIn, usersCtrl.edit);
+
 
 module.exports = router;
