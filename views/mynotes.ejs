@@ -40,13 +40,16 @@
         <td><%= q.content %></td>
         <td><a href="/mynotes/view<%= q._id %>">VIEW</a></td>
         <td><a href="/mynotes/edit<%= q._id %>">EDIT</a></td>
-        <td><a href="/mynotes/delete<%= q._id %>">DELETE</a></td>
+        
+        <form action="/users/mynotes/<%=q._id%>?_method=DELETE" class="delete-form" method ="POST">
+          <td><button type="submit"> X</button></td>
+        
       </tr>
       <% }); %>
     </tbody>
   </table>
 
- 
+
 
 <!--IGNORE ME!!!-->
 <!--Notes card-->

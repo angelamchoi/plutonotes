@@ -33,6 +33,8 @@ router.get('/users/create', function(req,res) {
 router.get('/users/mynotes', isLoggedIn, usersCtrl.allNotes);
 router.post('/users/mynotes', usersCtrl.create);
 
+//delete
+router.delete('/users/mynotes/:id', isLoggedIn, usersCtrl.destroy);
 
 
 module.exports = router;
