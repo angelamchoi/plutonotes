@@ -27,7 +27,7 @@ const create= (req, res) => {
 function edit (req, res) {
     Note.findById(req.params.id)
     .then(function(note) {
-        res.render('mynotes/edit', {
+        res.render('edit', {
             note
         })
 }) .catch (function(err) {
@@ -55,5 +55,5 @@ module.exports = {
     allNotes,
     create,
     edit,
-    destroy
+    delete: destroy
 }
