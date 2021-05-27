@@ -19,7 +19,6 @@ const create= (req, res) => {
     const note = new Note(req.body);
         note.save(function(err, note) {
         if (err) return res.redirect('/users/mynotes');
-    // Note.find({}, function (err, notes) {console.log('yay!!!', notes);
     res.redirect('/users/mynotes');
     });
 }
@@ -41,7 +40,8 @@ function edit (req, res) {
 function destroy(req, res) {
     const deleteNote = req.params.id;
     console.log(req.params.id);
-    Note.deleteOne(deleteNote);
+    Note.findOneAndDelete(deleteNote);
+    Note.find({}) .then(function(notes){console.log(notes)});
     res.redirect('/users/mynotes');
 }
 
