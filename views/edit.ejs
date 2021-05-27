@@ -1,9 +1,10 @@
 <%- include('partials/header') %>
-<h2>this is the edit page</h2>
+
 
 <body>
+    
     <div class ="create-notes">
-        <h2> hello, let's create a new note!</h2>
+        <h2> Edit section</h2>
           <!-- Switch -->
        <div class="switch">
         <label>
@@ -15,24 +16,26 @@
       </div>
     <br></br>
      <!-- Form -->
-        <form action ="/users/mynotes" method ="POST">
-        <label> Title</label>
-        <input required type ="text" name ="title">
-        <label>Description</label>
-        <input required type ="text" name ="description">    
-        <label>Date</label>
-        <input type = "datetime-local" name = "date">
-          <p>
-            <label>
-              <input type="checkbox" />
-              <span>Share publicly</span>
-            </label>
-          </p>
-          <br></br>
-        <textarea id= "notes" name = "content" required type ="text" placeholder = "Let the markdown writing magic begin..."></textarea>
-        <input type="submit" value="Add Note">
-      </form>
-    </div>
+    <form action ="/users/mynotes/<%=note._id %>?_method=PUT" class= "edit-form" method="POST">
+     <div class="form-group">
+     <label for="title">Title</label>
+     <input required value="<%= note.title %>" type="text" name="title" id="title" class="form-control">
+   </div>
+   <div class="form-group">
+     <label for="description">Description</label>
+     <textarea name="description" id="description" class="form-control"><%= note.description %></textarea>
+   </div>
+   <div class="form-group">
+    <label for ="date">Date</label>
+    <input type = "datetime-local" name = "date">
+  </div>
+   <div class="form-group">
+     <label for="content">Content</label>
+     <textarea required name="content" id="content" class="form-control"><%= note.content %></textarea>
+     <input type="submit" value="Add Note">
+    </form>
+  </div>
+  
     
      <!-- Markdown Cheatsheet -->
     <div class="row">
