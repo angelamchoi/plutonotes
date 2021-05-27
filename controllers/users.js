@@ -1,5 +1,6 @@
 const User = require('../models/user');
 const Note = require('../models/note');
+const { deleteOne } = require('../models/user');
 
 // all notes
 const allNotes =(req,res) =>{
@@ -36,12 +37,11 @@ function edit (req, res) {
 })
 }    
 
-  // delete
-function destroy(req, res) {
-    const deleteNote = req.params.id;
-    // console.log(req.params.id);
-    Note.findOneAndDelete(deleteNote);
-    Note.find({}) .then(function(notes){console.log(notes)});
+
+//delete 
+async function destroy(req, res) {
+    let note = await
+    Note.findByIdAndDelete(req.params.id);
     res.redirect('/users/mynotes');
 }
 

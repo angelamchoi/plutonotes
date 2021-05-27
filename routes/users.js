@@ -40,7 +40,7 @@ router.post('/users/mynotes', usersCtrl.create);
 router.delete('/users/mynotes/:id', isLoggedIn, usersCtrl.delete);
 
 //edit
-router.get('/users/mynotes/:id/edit', isLoggedIn, usersCtrl.edit);
+router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
 
 
 module.exports = router;
