@@ -33,8 +33,17 @@ p {
 
 body {
   background-color: aliceblue;
-  color: green;
 }
+footer {
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+  padding: 20px;
+}
+h6{
+  font-weight: bold;
+}
+
 
   /* body {
     padding: 15px;
@@ -59,7 +68,7 @@ body {
 
 
 input[type=text], content, textarea {
-    width: 10%;
+    width: 30%;
     height: 200px;
     padding: 20px;
     box-sizing: border-box;

@@ -31,7 +31,7 @@ router.get('/users/mynotes/edit', function(req,res) {
 
 // NOTES Routes
 // all notes
-router.get('/users/mynotes', isLoggedIn, usersCtrl.allNotes);
+router.get('/users/mynotes', usersCtrl.allNotes);
 // create
 router.post('/users/mynotes', isLoggedIn, usersCtrl.create);
 //delete
@@ -41,6 +41,6 @@ router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
 //update
 router.post('/users/mynotes/:id', isLoggedIn, usersCtrl.updateNote);
 //show
-router.get('/users/mynotes/:id', isLoggedIn, usersCtrl.showNote);
+router.get('/users/mynotes/:id', usersCtrl.showNote);
 
 module.exports = router;
