@@ -12,11 +12,9 @@ const allNotes =(req,res) =>{
 
 // create note
 const create= (req, res) => {
-    // console.log('hi!');
     for (let key in req.body) {
         if (req.body[key] === '') delete req.body[key];
     } 
-    // console.log(req.body);
     const note = new Note(req.body);
         note.save(function(err, note) {
         if (err) return res.redirect('/users/mynotes');
@@ -32,20 +30,16 @@ function edit (req, res) {
             note
         })
 }) .catch (function(err) {
-    console.log(err);
     res.redirect('/users/mynotes');
 })
 }    
 
-
 async function updateNote(req,res) {
-    console.log('I LOVE PIZZAAAA!!!');
     let updated = await Note.findByIdAndUpdate(req.params.id, {
         title: req.body.title,
         description: req.body.description,
         content: req.body.content
      }) 
-     console.log('hi');
      res.redirect('/users/mynotes');
 }
 
