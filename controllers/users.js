@@ -37,6 +37,18 @@ function edit (req, res) {
 })
 }    
 
+async function updateNote(req,res) {
+    let updated = await Note.findByIdAndUpdate(req.params.id, {
+        title: req.body.title,
+        description: req.body.description,
+        content: req.body.content
+     }) 
+     console.log('hi!');
+     res.redirect('/users/mynotes');
+}
+
+
+
 
 //delete 
 async function destroy(req, res) {
@@ -45,11 +57,6 @@ async function destroy(req, res) {
     res.redirect('/users/mynotes');
 }
 
-//show
-// function show(req, res) {
-//     Note.findById(req.params.id)
-//       .populate(note)
-//       .exec(function (err, note) {
 
 module.exports = {
     allNotes,
