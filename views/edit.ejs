@@ -16,7 +16,7 @@
       </div>
     <br></br>
      <!-- Form -->
-    <form action ="/users/mynotes/<%=note._id %>?_method=PUT" class= "edit-form" method="POST">
+    <form action ="/users/mynotes/<%=note._id %>?_method=POST" class= "edit-form" method="POST">
      <div class="form-group">
      <label for="title">Title</label>
      <input required value="<%= note.title %>" type="text" name="title" id="title" class="form-control">

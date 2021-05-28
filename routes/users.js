@@ -43,7 +43,7 @@ router.delete('/users/mynotes/:id', isLoggedIn, usersCtrl.delete);
 router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
 
 //update
-router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.update);
+router.post('/users/mynotes/:id', usersCtrl.updateNote);
 
 
 module.exports = router;

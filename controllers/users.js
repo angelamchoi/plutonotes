@@ -37,13 +37,15 @@ function edit (req, res) {
 })
 }    
 
+
 async function updateNote(req,res) {
+    console.log('I LOVE PIZZAAAA!!!');
     let updated = await Note.findByIdAndUpdate(req.params.id, {
         title: req.body.title,
         description: req.body.description,
         content: req.body.content
      }) 
-     console.log('hi!');
+     console.log('hi');
      res.redirect('/users/mynotes');
 }
 
@@ -58,6 +60,6 @@ module.exports = {
     allNotes,
     create,
     edit,
+    updateNote,
     delete: destroy,
-    update: updateNote
 }
