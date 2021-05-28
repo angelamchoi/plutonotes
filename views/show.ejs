@@ -16,22 +16,20 @@
     <br></br>
      <!-- Form -->
     <form action ="/users/mynotes/<%=note._id %>?_method=GET" class= "view-form" method="POST">
-     <div class="form-group">
-     <label for="title">Title</label>
-     <input required value="<%= note.title %>" type="text" name="title" id="title" class="form-control">
-   </div>
-   <div class="form-group">
-     <label for="description">Description</label>
-     <textarea name="description" id="description" class="form-control"><%= note.description %></textarea>
-   </div>
-   <div class="form-group">
-    <label for ="date">Date</label>
-    <input type = "datetime-local" name = "date">
-  </div>
-   <div class="form-group">
-     <label for="content">Content</label>
-     <textarea required name="content" id="content" class="form-control"><%= note.content %></textarea>
-
+        <div class="row">
+            <div class="col s12 m6">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title"><%=note.title %></span>
+                  <p><%= note.description %> </p>
+                  <p><%=note.date %></p>
+                  <p><%=note.content %></p>
+              </div>
+            </div>
+          </div>
+   <div class="card-action">
      <p> If you think your notes are gucci, feel free to share it with the world! :)</p>
      <input type="submit" value="Share publicly">
   </div>
+
+

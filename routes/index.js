@@ -25,7 +25,7 @@ router.get('/logout', function (req, res) {
   res.redirect('/');
 });
 
-//public notes
+//sample public notes
 router.get('/publicnotes', function(req,res) {
   res.render('publicnotes');
 })
@@ -38,6 +38,8 @@ router.get('/publicnotes/view', function(req,res) {
 router.get('/home', function(req,res) {
   res.render('index');
 })
+
+// router.get('/users/mynotes/:id', publishedCtrl.publicNote);
 
 module.exports = router;
 
