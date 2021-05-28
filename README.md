@@ -2,7 +2,7 @@
 
 Plutonotes is a web application that allows you to create notes and post your notes publicly for anyone to see. This application was created for General Assembly's Software Engineering Immersive (SEI) Program.
 
-## Inspiration for the game
+## Inspiration 
 As an online student, I wanted to build an application where students are able to not only keep their notes in one place, but also see how other students are taking their notes. The purpose of the application is to allow students to learn and share their knowledge with the world. 
 
 ## Technologies Used
@@ -71,8 +71,7 @@ Difficulties faced
 - Routing
     - making sure the path and url is consistent throughout all my pages 
     - 404 for days
-- delete  
-- update
+- delete  & update functions
     - find and update takes in 2 parameters (1. what you want to find 2. update it)
 
 
@@ -82,4 +81,4 @@ Lessons Learned
     - write down steps
 - keep it simple
 - substance over style
-- 
+
