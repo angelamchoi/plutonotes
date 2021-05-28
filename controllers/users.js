@@ -47,9 +47,6 @@ async function updateNote(req,res) {
      res.redirect('/users/mynotes');
 }
 
-
-
-
 //delete 
 async function destroy(req, res) {
     let note = await
@@ -57,10 +54,10 @@ async function destroy(req, res) {
     res.redirect('/users/mynotes');
 }
 
-
 module.exports = {
     allNotes,
     create,
     edit,
-    delete: destroy
+    delete: destroy,
+    update: updateNote
 }

@@ -34,13 +34,16 @@ router.get('/users/mynotes/edit', function(req,res) {
 router.get('/users/mynotes', isLoggedIn, usersCtrl.allNotes);
 
 // create
-router.post('/users/mynotes', usersCtrl.create);
+router.post('/users/mynotes', isLoggedIn, usersCtrl.create);
 
 //delete
 router.delete('/users/mynotes/:id', isLoggedIn, usersCtrl.delete);
 
 //edit
 router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
+
+//update
+router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.update);
 
 
 module.exports = router;
