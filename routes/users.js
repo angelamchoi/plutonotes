@@ -8,11 +8,11 @@ function isLoggedIn(req, res, next) {
 }
 // Navigation bar - profile
 router.get('/', function(req, res) {
-  res.render('profile')
+  res.render('create')
 });
 
 router.get('/users', function(req,res){
-  res.render('profile');
+  res.render('create');
 })
 
 // // Navigation bar - create
