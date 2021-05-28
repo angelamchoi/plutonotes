@@ -50,10 +50,22 @@ async function destroy(req, res) {
     res.redirect('/users/mynotes');
 }
 
+function showNote (req, res) {
+    Note.findById(req.params.id)
+    .then(function(note) {
+        res.render('show', {
+            note
+        })
+}) .catch (function(err) {
+    res.redirect('/users/mynotes');
+})
+}
+
 module.exports = {
     allNotes,
     create,
     edit,
     updateNote,
     delete: destroy,
+    showNote
 }

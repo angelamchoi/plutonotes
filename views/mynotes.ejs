@@ -38,8 +38,12 @@
         <td><%= q.description %></td>
         <td><%= q.date.toLocaleDateString()%></td>
         <td><%= q.content %></td>
-        <td><a href="/mynotes/view<%= q._id %>">VIEW</a></td>
         
+          <!--view-->
+        <form action ="/users/mynotes/<%=q._id %>?_method=GET" class= "view-form" method="POST">
+          <td><button type="submit"><i class="material-icons center">subject</i></button></td>
+       </form>
+
         <!--edit-->
         <form action ="/users/mynotes/<%=q._id %>?_method=PUT" class= "edit-form" method="POST"> 
           <td><button type="submit"> <i class="material-icons center">mode_edit</i></button> </td>

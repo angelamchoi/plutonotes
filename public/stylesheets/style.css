@@ -1,42 +1,65 @@
 nav {
   background-color: white;
 }
+
 nav ul a {
   color:darkturquoise;
   padding: 0 15px;
   font-weight: bolder;
   font-size: large;
-
 }
 
 nav .brand-logo {
-   color: rebeccapurple;
-   background-color: white;
-   padding: 0 15px;
-   font-weight: bold;
-   font-size: large;
- }
+  color: rebeccapurple;
+  background-color: white;
+  padding: 0 15px;
+  font-weight: bold;
+  font-size: large;
+}
 
- 
 h1 {
   color: rebeccapurple;
   font-weight: bold;
   text-align: center;
   font-size: 80px;
 }
-p {
-   line-height: 2rem;
-   text-align: center;
-   font-size: 30px;
-   color: slategrey;
- }
 
- body {
-   background-color: aliceblue;
- }
- 
- textarea {
-    width: 30%;
+p {
+  line-height: 2rem;
+  text-align: center;
+  font-size: 30px;
+  color: slategrey;
+}
+
+body {
+  background-color: aliceblue;
+  color: green;
+}
+
+  /* body {
+    padding: 15px;
+    background-color: white;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+  } */
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+  /* form {
+    width: 50%;
+  } */
+
+  textarea {
+    height: 50%;
+    width: 50%;
+  }
+
+
+input[type=text], content, textarea {
+    width: 10%;
     height: 200px;
     padding: 20px;
     box-sizing: border-box;
@@ -48,18 +71,6 @@ p {
     margin-bottom: 20px;
   }
 
-textarea notes {
-   width: 30%;
-    height: 500px;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-    margin-left: 35%;
-    display: flex;
-    margin-bottom: 20px;
-  }
 
   input[type=submit] {
     background: rgb(130,49,230);
@@ -78,7 +89,6 @@ textarea notes {
     background: #26a69a;
     color: white;
   }
-
 
 /*landing page icon*/
 .material-icons {

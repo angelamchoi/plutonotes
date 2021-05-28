@@ -24,26 +24,23 @@ router.get('/users/mynotes/view', function(req,res) {
   res.render('mynotesview')
 });
 
-
 //edit 
 router.get('/users/mynotes/edit', function(req,res) {
   res.render('edit')
 });
 
+// NOTES Routes
 // all notes
 router.get('/users/mynotes', isLoggedIn, usersCtrl.allNotes);
-
 // create
 router.post('/users/mynotes', isLoggedIn, usersCtrl.create);
-
 //delete
 router.delete('/users/mynotes/:id', isLoggedIn, usersCtrl.delete);
-
 //edit
 router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
-
 //update
 router.post('/users/mynotes/:id', isLoggedIn, usersCtrl.updateNote);
-
+//show
+router.get('/users/mynotes/:id', isLoggedIn, usersCtrl.showNote);
 
 module.exports = router;

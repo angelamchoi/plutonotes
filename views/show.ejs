@@ -1,10 +1,9 @@
 <%- include('partials/header') %>
 
-
 <body>
     
     <div class ="create-notes">
-        <h2> Edit Mode </h2>
+        <h2> View Mode</h2>
           <!-- Switch -->
        <div class="switch">
         <label>
@@ -16,7 +15,7 @@
       </div>
     <br></br>
      <!-- Form -->
-    <form action ="/users/mynotes/<%=note._id %>?_method=POST" class= "edit-form" method="POST">
+    <form action ="/users/mynotes/<%=note._id %>?_method=GET" class= "view-form" method="POST">
      <div class="form-group">
      <label for="title">Title</label>
      <input required value="<%= note.title %>" type="text" name="title" id="title" class="form-control">
@@ -32,24 +31,7 @@
    <div class="form-group">
      <label for="content">Content</label>
      <textarea required name="content" id="content" class="form-control"><%= note.content %></textarea>
-     <input type="submit" value="Save">
+
+     <p> If you think your notes are gucci, feel free to share it with the world! :)</p>
+     <input type="submit" value="Share publicly">
   </div>
-  
-    
-     <!-- Markdown Cheatsheet -->
-    <div class="row">
-        <div class="col s12 m2">
-          <div class="card-panel teal">
-            <span class="white-text">
-                <p>Markdown Cheatsheet</p>
-                <p># Big Header</p>
-                <p><em>*italicize*</em></p>
-                <p> **bold** </p>
-            </span>
-          </div>
-        </div>
-      </div>
-    
-    </body>
-    </html>
-    <%- include('partials/footer') %>
