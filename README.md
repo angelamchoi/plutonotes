@@ -1,4 +1,4 @@
-# Plutonotes
+# Plutonotes📝
 
 Plutonotes is a web application that allows you to create notes and post your notes publicly for anyone to see. This application was created for General Assembly's Software Engineering Immersive (SEI) Program.
 
@@ -53,8 +53,7 @@ The Trello board for user stories can be found [here](https://trello.com/b/GDpTZ
     
 ### Wireframes
 Landing page
-![image](wireframe-pics/landing_page.jpg)
-Oauth login 
+![image](wireframe-pics/landing_page.jpg) 
 ![image](wireframe-pics/login.jpg)
 Create Note
 ![image](wireframe-pics/create-notes.jpg)
