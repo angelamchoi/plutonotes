@@ -61,11 +61,22 @@ function showNote (req, res) {
 })
 }
 
+function publicNote (req, res) {
+    Note.findById(req.params.id)
+    .then(function(note) {
+        res.render('publicnotes', {
+            note
+        })
+}) .catch (function(err) {
+    res.redirect('/users/mynotes');
+})
+}
 module.exports = {
     allNotes,
     create,
     edit,
     updateNote,
     delete: destroy,
-    showNote
+    showNote,
+    publicNote
 }

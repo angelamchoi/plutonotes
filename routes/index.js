@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const passport = require('passport');
-const publishedCtrl = require('../controllers/published');
 
 router.get('/', function(req, res) {
   res.render('index', { title: 'plutonotes' });
@@ -26,22 +25,10 @@ router.get('/logout', function (req, res) {
   res.redirect('/');
 });
 
-//sample public notes
-router.get('/publicnotes', function(req,res) {
-  res.render('publicnotes');
-})
-
-router.get('/publicnotes/view', function(req,res) {
-  res.render('publicviews');
-})
-
 //home page
 router.get('/home', function(req,res) {
   res.render('index');
 })
-
-// public notes
-router.post('/publicnotes/:id', publishedCtrl.publicNote);
 
 module.exports = router;
 
