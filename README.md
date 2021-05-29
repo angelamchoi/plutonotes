@@ -24,13 +24,14 @@ Access the plutonotes web app [here](https://plutonotes.herokuapp.com/home).
 
 Cloning my repo
 - Please make sure to download the following:
-1.`npm install`
-2. Run `npm dev start`
-3. install method-override
-4. dotenv
-5. install mongoose 
+-`npm install`
+- Run `npm dev start`
+- install method-override
+- dotenv
+- install mongoose 
 
 ## Screenshots
+![home-page].jpg
 
 ### User Stories
 The Trello board for user stories can be found [here](https://trello.com/b/GDpTZWf2/plutonotes).
