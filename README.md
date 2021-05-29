@@ -28,7 +28,7 @@ Cloning my repo
 - install method-override
 - dotenv
 - install mongoose 
-- To run the app: `npm dev start`
+- To run the app: `npm run dev`
 
 ## Screenshots
 Landing page
