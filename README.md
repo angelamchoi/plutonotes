@@ -70,17 +70,17 @@ Reviews and comments on public notes
 ![image](ERD/ERD.png)
 
 ## Reflection / Difficulties Faced
-Things I enjoyed:
+❤️ Things I enjoyed:
 - Working with Node.js 
     - After completing this project, Node.js is incredibly smart and powerful and can do so much! I love how all my pages connected with one another.
 - Implementing OAuth
     - I feel like as an aspiring developer, it is my responsibility to create a safe environment for all users, namely, private information like passwords. I enjoyed implementing OAuth into my application. 
 
-Difficulties faced
+⛰️ Difficulties faced:
 - Routing
 - Posting notes to public notes section
 
-Lessons Learned
+📚 Lessons Learned:
 - Organization & Work flow
     - write down steps in my notebook 
 - Keep it simple
