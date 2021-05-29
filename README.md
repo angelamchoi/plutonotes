@@ -31,28 +31,46 @@ Cloning my repo
 - install mongoose 
 
 ## Screenshots
-Home page
+Landing page
 ![image](current-MVP/home-page.jpg)
+Creating a note
 ![image](current-MVP/create-note-1.jpg)
+Light & Dark Mode
 ![image](current-MVP/create-note-2.jpg)
+Viewing all notes
 ![image](current-MVP/my-notes-page.jpg)
-![image](current-MVP/edit-page-2.jpg)
+Editing a note
+![image](current-MVP/edit-page.jpg)
+Share note publicly
 ![image](current-MVP/share-publicly.jpg)
+Community public notes
 ![image](current-MVP/publicnotes.jpg)
-
-
 
 ### User Stories
 The Trello board for user stories can be found [here](https://trello.com/b/GDpTZWf2/plutonotes).
 
+![image](current-MVP/trelloboard.png)
     
 ### Wireframes
+Landing page
+![image](wireframe-pics/landing_page.jpg)
+Oauth login 
+![image](wireframe-pics/login.jpg)
+Create Note
+![image](wireframe-pics/create-notes.jpg)
+My notes
+![image](wireframe-pics/mynotes.jpg)
+Share notes publicly
+![image](wireframe-pics/share-note.jpg)
+Community public notes
+![image](wireframe-pics/public-notes.jpg)
+Reviews and comments on public notes
+![image](wireframe-pics/public-notes-2.jpg)
 
 ### Entity Relationship Diagram
+![image](ERDs/ERD.png)
 
 ### Reflection / Difficulties Faced
-The back-end is behind the scenes executing its job. It is an area that users don't interact with, but it connects everything together to make an application work. 
-
 Things I enjoyed:
 - Working with Node.js 
     - After completing this project, Node.js is incredibly smart and powerful and can do so much! I love how all my pages connected with one another.
@@ -78,7 +96,7 @@ The follow are the next steps in improving my application:
 
 - Incorporating Markdown format
 - Add comments and ratings on public notes section
-- Collaboration like google docs
+- Collaboration feature like google docs
 - Text-speech option 
 - Text editor API for users when taking notes
 - Include additional logins such as github
