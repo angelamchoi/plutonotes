@@ -31,7 +31,16 @@ Cloning my repo
 - install mongoose 
 
 ## Screenshots
-![home-page].jpg
+Home page
+![image](current-MVP/home-page.jpg)
+![image](current-MVP/create-note-1.jpg)
+![image](current-MVP/create-note-2.jpg)
+![image](current-MVP/my-notes-page.jpg)
+![image](current-MVP/edit-page-2.jpg)
+![image](current-MVP/share-publicly.jpg)
+![image](current-MVP/publicnotes.jpg)
+
+
 
 ### User Stories
 The Trello board for user stories can be found [here](https://trello.com/b/GDpTZWf2/plutonotes).
