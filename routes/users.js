@@ -51,8 +51,10 @@ router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
 router.post('/users/mynotes/:id', isLoggedIn, usersCtrl.updateNote);
 //show
 router.get('/users/mynotes/:id', usersCtrl.showNote);
+//publish
+// router.post('/users/publicnotes', usersCtrl.publish);
 
 //PUBLIC NOTES Routes
-router.get('/users/publicnotes/:id', usersCtrl.publicNote);
+router.post('/users/publicnotes', usersCtrl.publicNote);
 
 module.exports = router;

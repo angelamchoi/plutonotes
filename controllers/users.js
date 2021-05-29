@@ -60,6 +60,13 @@ function showNote (req, res) {
     res.redirect('/users/mynotes');
 })
 }
+const publish =(req,res) =>{
+    const pnote = new Note(req.body);
+        pnote.save(function(err, pnote) {
+        if (err) return console.log(err);
+    res.redirect('/users/publicnotes');
+    });
+}
 
 function publicNote (req, res) {
     Note.findById(req.params.id)
@@ -78,5 +85,6 @@ module.exports = {
     updateNote,
     delete: destroy,
     showNote,
-    publicNote
+    publicNote,
+    publish
 }
