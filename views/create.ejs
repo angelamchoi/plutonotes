@@ -1,4 +1,16 @@
 <%- include('partials/header') %>
+<style>
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+body {
+  text-align: center;
+  width: 80%;
+}
+</style>
+
 <body>
   <div class="navbar-fixed">
       <nav>
@@ -43,7 +55,7 @@
 
  <!-- Markdown Cheatsheet -->
 <div class="row">
-    <div class="col s12 m2">
+    <div class="col s12 m4">
       <div class="card-panel teal">
         <span class="white-text">
             <p>Markdown Cheatsheet</p>
@@ -54,5 +66,12 @@
       </div>
     </div>
   </div>
+
+<script>
+  function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+</script>
 </body>
 </html>

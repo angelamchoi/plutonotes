@@ -51,8 +51,6 @@ router.put('/users/mynotes/:id', isLoggedIn, usersCtrl.edit);
 router.post('/users/mynotes/:id', isLoggedIn, usersCtrl.updateNote);
 //show
 router.get('/users/mynotes/:id', usersCtrl.showNote);
-//publish
-// router.post('/users/publicnotes', usersCtrl.publish);
 
 //PUBLIC NOTES Routes
 router.post('/users/publicnotes', usersCtrl.publicNote);
