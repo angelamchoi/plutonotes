@@ -71,6 +71,8 @@ function publicNote (req, res) {
     res.redirect('/users/mynotes');
 })
 }
+
+
 module.exports = {
     allNotes,
     create,

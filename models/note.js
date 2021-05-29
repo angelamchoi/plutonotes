@@ -19,7 +19,7 @@ const noteSchema = new Schema ({
       type: String,
       required: true
     },
-    published: { type: Boolean, default: false},
+
   });
-  
+
   module.exports = mongoose.model('Note', noteSchema);

@@ -24,11 +24,11 @@ Access the plutonotes web app [here](https://plutonotes.herokuapp.com/home).
 
 Cloning my repo
 - Please make sure to download the following:
--`npm install`
-- Run `npm dev start`
+- `npm install`
 - install method-override
 - dotenv
 - install mongoose 
+- To run the app: `npm dev start`
 
 ## Screenshots
 Landing page
@@ -46,12 +46,14 @@ Share note publicly
 Community public notes
 ![image](current-MVP/publicnotes.jpg)
 
-### User Stories
+## Planning Process
+
+### 1️⃣ User Stories
 The Trello board for user stories can be found [here](https://trello.com/b/GDpTZWf2/plutonotes).
 
 ![image](current-MVP/trelloboard.png)
     
-### Wireframes
+### 2️⃣ Wireframes
 Landing page
 ![image](wireframe-pics/landing_page.jpg) 
 ![image](wireframe-pics/login.jpg)
@@ -66,7 +68,7 @@ Community public notes
 Reviews and comments on public notes
 ![image](wireframe-pics/public-notes-2.jpg)
 
-### Entity Relationship Diagram
+### 3️⃣ Entity Relationship Diagram
 ![image](ERD/ERD.png)
 
 ## Reflection / Difficulties Faced
@@ -81,8 +83,6 @@ Reviews and comments on public notes
 - Posting notes to public notes section
 
 📚 Lessons Learned:
-- Organization & Work flow
-    - write down steps in my notebook 
 - Keep it simple
     - I focused my attention on making sure I implemented the important functionalities such as create, edit, view, and delete before adding more features to my application. Therefore, my markdown format was on bottom of my list.
 - Look at the URL for routing issues
