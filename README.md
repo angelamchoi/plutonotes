@@ -36,8 +36,7 @@ Landing page
 Creating a note
 ![image](current-MVP/create-note-1.jpg)
 Light & Dark Mode
-![image](current-MVP/create-note.PNG)
-![image](current-MVP/darkmode.PNGg)
+![image](current-MVP/create-note-2.jpg)
 Viewing all notes
 ![image](current-MVP/my-notes-page.jpg)
 Editing a note
