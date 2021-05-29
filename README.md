@@ -58,7 +58,7 @@ Landing page
 Create Note
 ![image](wireframe-pics/create-notes.jpg)
 My notes
-![image](wireframe-pics/mynotes.jpg)
+![image](wireframe-pics/my-notes.jpg)
 Share notes publicly
 ![image](wireframe-pics/share-note.jpg)
 Community public notes
@@ -67,9 +67,9 @@ Reviews and comments on public notes
 ![image](wireframe-pics/public-notes-2.jpg)
 
 ### Entity Relationship Diagram
-![image](ERDs/ERD.png)
+![image](ERD/ERD.png)
 
-### Reflection / Difficulties Faced
+## Reflection / Difficulties Faced
 Things I enjoyed:
 - Working with Node.js 
     - After completing this project, Node.js is incredibly smart and powerful and can do so much! I love how all my pages connected with one another.
